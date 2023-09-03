@@ -1,7 +1,6 @@
 // This is heap data structure realised with golang generics.
 // Attractiveness of this package is it simplicity to use,
 // because need to declare only one function -- Comparator.
-
 package heap
 
 type Heap[T comparable] struct {

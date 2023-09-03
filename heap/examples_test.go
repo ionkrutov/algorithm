@@ -1,10 +1,14 @@
-package heap
+package heap_test
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/ionkrutov/algorithm/heap"
+)
 
 func ExampleHeap_Insert() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert(5)
 	h.Insert(7)
 	h.Insert([]int{10, 12, 14, 16}...)
@@ -17,7 +21,7 @@ func ExampleHeap_Insert() {
 
 func ExampleHeap_Top() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert(5)
 	h.Insert(7)
 	h.Insert([]int{10, 12, 14, 16}...)
@@ -31,7 +35,7 @@ func ExampleHeap_Top() {
 
 func ExampleHeap_ExtractTop() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert(5)
 	h.Insert(7)
 	h.Insert([]int{10, 12, 14, 16}...)
@@ -44,7 +48,7 @@ func ExampleHeap_ExtractTop() {
 
 func ExampleHeap_Remove() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert(5)
 	h.Insert(7)
 	h.Insert([]int{10, 12, 14, 16}...)
@@ -57,7 +61,7 @@ func ExampleHeap_Remove() {
 
 func ExampleHeap_ChangePriority() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert([]int{5, 7, 10, 12, 14, 16}...)
 	fmt.Println(h.GetHeap())
 	h.ChangePriority(0, 2)
@@ -70,7 +74,7 @@ func ExampleHeap_ChangePriority() {
 
 func ExampleHeap_GetHeap() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert([]int{5, 7, 10, 12, 14, 16}...)
 	fmt.Println(h.GetHeap())
 
@@ -80,7 +84,7 @@ func ExampleHeap_GetHeap() {
 
 func ExampleHeap_Size() {
 	// create max heap
-	h := Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
+	h := heap.Heap[int]{Comparator: func(i1, i2 int) bool { return i1 > i2 }}
 	h.Insert([]int{5, 7, 10, 12, 14, 16}...)
 	fmt.Println(h.Size())
 
@@ -96,7 +100,7 @@ func ExampleCustomStruct() {
 	}
 
 	// min heap by salary
-	h := Heap[Person]{Comparator: func(p1, p2 Person) bool { return p1.Salary < p2.Salary }}
+	h := heap.Heap[Person]{Comparator: func(p1, p2 Person) bool { return p1.Salary < p2.Salary }}
 	h.Insert(Person{"Anna", 32, 122.34})
 	h.Insert(Person{"Peter", 45, 212.4})
 	h.Insert(Person{"Igori", 23, 74.2})
