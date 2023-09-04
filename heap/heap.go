@@ -1,5 +1,5 @@
 // This is heap data structure realised with golang generics.
-// Attractiveness of this package is it simplicity to use,
+// The attractiveness of this package it's simplicity to use it,
 // because need to declare only one function -- Comparator.
 package heap
 

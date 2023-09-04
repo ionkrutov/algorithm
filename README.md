@@ -2,13 +2,13 @@
 
 ## Heap
 Heap data structure ([Wiki](https://en.wikipedia.org/wiki/Heap_(data_structure))) is realised with golang generics.
-Attractiveness of this package is it simplicity to use,
+The attractiveness of this package it's simplicity to use it,
 because need to define only one function -- Comparator.
 
 See the [Documentation](https://pkg.go.dev/github.com/ionkrutov/algorithm/heap)
 
 ### Examples
-A simple heap sort can be realised if we will extract top element one by one and put it in another array.
+A simple heap sort can be realised if we will extract top element one by one and put it into another array.
 
 ```bash
 go get -u github.com/ionkrutov/algorithm/heap
